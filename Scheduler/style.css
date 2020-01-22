@@ -8,14 +8,14 @@ body {
 
 
   
-  textarea{
+  /* textarea{
     background: transparent;
     border: none;
     resize: none;
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
-  }
+  } */
   
   .jumbotron {
     text-align: center;
@@ -37,10 +37,10 @@ body {
   .row {
     width:100%;
   }
-  .hours{
+  /* .hours{
       
       line-height: 80px
-  }
+  } */
 
  
   
@@ -48,20 +48,27 @@ body {
 
   .col-6 {
       
-    line-height: 80px
+    background: transparent;
+    border: none;
+    resize: none;
+    color: #000000;
+    border-left: 1px solid black;
+    padding: 10px;
+    line-height: 80px;
 }
 
 
 
 
   .full-width{
-      width:100%
+      width:100%;
   }
   
-  .hour {
+  .hours {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
+    line-height: 80px;
   }
   
   .past {
@@ -79,7 +86,7 @@ body {
     color: white;
   }
   
-  .save-Btn {
+  /* .saveBtn {
     border-left: 1px solid black; 
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px; 
@@ -88,7 +95,7 @@ body {
     line-height: 100px;
     width: 100px
   }
-  
+   */
   .save-Btn i:hover {
     font-size: 20px;
     transition: all .3s ease-in-out;
@@ -97,4 +104,4 @@ body {
 
   .saveBtn {
     width: 100%;
-    line-height: 80px}
+    line-height: 70px}
