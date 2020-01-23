@@ -1,167 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-
-  <title>Work Day Scheduler</title>
+    <title>Document</title>
 </head>
-
 <body>
-  <header class="jumbotron">
-    <h1 class="display-3">Work Day Scheduler</h1>
-    <p class="lead">A simple calendar app for scheduling your work day</p>
-    <label for id="now"></label>
+
+        <header class="jumbotron text-center">
+                <h1 class="display-3">Work Day Scheduler</h1>
+                <p class="lead">A simple calendar app for scheduling your work day</p>
+                <label for id="now"></label>
+            
+            
+            
+            
+            
+            
+                <p id="currentDay" class="lead"></p>
+              </header>
+
+
+          <div class="container">
+              <div class="showPlanner">
+                  
+              </div>
+          </div>
 
 
 
 
-
-
-    <p id="currentDay" class="lead"></p>
-  </header>
-  <div class="container row time-block">
-    <div class="row">
-      <div class="col-3 hours">
-        <ul>
-          <li><span>9:00 am </span>
-          </li>
-          <li><span>10:00 am</span>
-          </li>
-          <li><span>11:00 am</span>
-          </li>
-          <li><span>12:00 pm</span>
-          </li>
-          <li><span>1:00 pm</span>
-          </li>
-          <li><span>2:00 pm</span>
-          </li>
-          <li><span>3:00 pm</span>
-          </li>
-          <li><span>4:00 pm</span>
-          </li>
-          <li><span>5:00 pm</span>
-          </li>
-        </ul>
-      </div>
-
-
-      <div class="col-6">
-
-
-        <input type="text" class="full-width inP1"></input>
-        <input type="text" class="full-width inP2"></input>
-        <input type="text" class="full-width inP3"></input>
-        <input type="text" class="full-width inP4"></input>
-        <input type="text" class="full-width inP5"></input>
-        <input type="text" class="full-width inP6"></input>
-        <input type="text" class="full-width inP7"></input>
-        <input type="text" class="full-width inP8"></input>
-        <input type="text" class="full-width inP9"></input>
-        
-
-      </div>
-
-
-      <div class="col-3 save-button">
-        <button class="saveBtn btn1" id="target1">Save</button>
-        <button class="saveBtn btn2" id="target2">Save</button>
-        <button class="saveBtn btn3" id="target3">Save</button>
-        <button class="saveBtn btn4" id="target4">Save</button>
-        <button class="saveBtn btn5" id="target5">Save</button>
-        <button class="saveBtn btn6" id="target6">Save</button>
-        <button class="saveBtn btn7" id="target7">Save</button>
-        <button class="saveBtn btn8" id="target8">Save</button>
-        <button class="saveBtn btn9" id="target9">Save</button>
-      </div>
-    </div>
-  </div>
-  </div>
-
-
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script>
-    $(document).ready(function () {
-
-      var now = moment();
-      $("#now").text(now.format("lll"));
-    })
-
-   
-
-      // when button 1 is clicked execute this function
-      $(".btn1").on('click', function(){
-        // grab the text input and save to local storage
-        var input1 = $(".inP1").val();
-        localStorage.setItem('9am', JSON.stringify(input1) );
-      })
-
-      $(".btn2").on('click', function(){
-        // grab the text input and save to local storage
-        var input2 = $(".inP2").val();
-        localStorage.setItem('10am', JSON.stringify(input2) );
-      })
-    
-      $(".btn3").on('click', function(){
-        // grab the text input and save to local storage
-        var input3 = $(".inP3").val();
-        localStorage.setItem('11am', JSON.stringify(input3) );
-      })
-    
-      $(".btn4").on('click', function(){
-        // grab the text input and save to local storage
-        var input4 = $(".inP4").val();
-        localStorage.setItem('12am', JSON.stringify(input4) );
-      })
-    
-      $(".btn5").on('click', function(){
-        // grab the text input and save to local storage
-        var input5 = $(".inP5").val();
-        localStorage.setItem('1pm', JSON.stringify(input5) );
-      })
-    
-      $(".btn6").on('click', function(){
-        // grab the text input and save to local storage
-        var input6 = $(".inP6").val();
-        localStorage.setItem('2pm', JSON.stringify(input6) );
-      })
-    
-      $(".btn7").on('click', function(){
-        // grab the text input and save to local storage
-        var input7 = $(".inP7").val();
-        localStorage.setItem('3pm', JSON.stringify(input7) );
-      })
-    
-      $(".btn8").on('click', function(){
-        // grab the text input and save to local storage
-        var input8 = $(".inP8").val();
-        localStorage.setItem('4pm', JSON.stringify(input8) );
-      })
-    
-      $(".btn9").on('click', function(){
-        // grab the text input and save to local storage
-        var input9 = $(".inP9").val();
-        localStorage.setItem('5pm', JSON.stringify(input9) );
-      })
-    
-    
-
-
-  </script>
-
-
+  <script src="script.js"></script>
 
 </body>
-
 </html>
