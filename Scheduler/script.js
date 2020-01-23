@@ -39,7 +39,7 @@ for (let index = 0; index < workHours.length; index++) {
     var columnThree=$("<div class='col-sm-2'>")
     var Button=$("<button class='btn-primary'>")
       Button.attr("class","saveBtn")
-       Button.text("save")
+       Button.text("Save")
     columnThree.append(Button)
 
     row.append(columnOne,columnTwo,columnThree)

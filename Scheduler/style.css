@@ -42,15 +42,18 @@ body {
   
 
 
-  .col-6 {
+  .col-sm-8 {
       
     background: transparent;
     border: none;
     resize: none;
     color: #000000;
     border-left: 1px solid black;
-    padding: 10px;
+    padding: 5px;
     line-height: 80px;
+    border-top: 1px dashed black;
+   
+   
 }
 
 
@@ -60,7 +63,7 @@ body {
       width:100%;
   }
   
-  .hours {
+  .col-sm-2 {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
@@ -82,22 +85,28 @@ body {
     color: white;
   }
   
-  /* .saveBtn {
+  .saveBtn {
     border-left: 1px solid black; 
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px; 
     background-color: #06AED5;
     color: white;
-    line-height: 100px;
-    width: 100px
+    width: 100%;
+    line-height: 56px;
+    position: relative;
+    right: 25px;
+    bottom: 5.5px;
+    
+    
+    
+    
+    
   }
-   */
+  
   .save-Btn i:hover {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }
 
 
-  .saveBtn {
-    width: 100%;
-    line-height: 70px}
+  
