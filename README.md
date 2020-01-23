@@ -3,8 +3,6 @@ This will allow a user to create a to-do list for a typical work day.Depending o
 # Link
  https://tabby-lab.github.io/Work_Day_Scheduler/ 
  <!-- why is mine not working -->
-# Files 
-Html/Css/JQuery
 # Images
 
 # Credits
