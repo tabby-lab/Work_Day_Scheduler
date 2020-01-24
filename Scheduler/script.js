@@ -1,17 +1,20 @@
 //Setting an array of times
 var workHours=[9, 10, 11, 12, 13, 14, 15, 16, 17];
 
-
+// var rightNow=moment()
 //Function to display planner..setting a var for moment with a for loop describing the hours
 //starting from 9am to 5pm(17)
 function displayPlanner(){
 var currentHour=moment().hour()
+const now = moment().format('MMMM Do YYYY');
+
+$("#now").text(now);
 for (let index = 0; index < workHours.length; index++) {
       
     //Creating a row dynamically for HTML
      var row=$("<div class='row'>")
      //Col 1 is for hours. creating dynamically
-    var columnOne=$("<div class='col-sm-2  '>")
+    var columnOne=$("<div class='col-sm-2'>")
     //Col 1 attribute setting up dynamically to center the text(css)
     columnOne.attr("style","text-align:center")
     //My 9-17 array which are just numners are now am if the hour is less than 12pm
@@ -29,6 +32,7 @@ for (let index = 0; index < workHours.length; index++) {
     //are just bootstrap colors for the text according ti time.the danger color is red and is for 
     //the current hour
     var columnTwo=$("<div class='col-sm-8'>")
+    //form control = 100% width
     var textarea=$("<textarea class='bg-danger form-control'>")
     //This is explaining if the current hour is less than working hour then change color grey
     if (currentHour<workHours[index]){
@@ -57,7 +61,7 @@ for (let index = 0; index < workHours.length; index++) {
     //appending all columns 
     row.append(columnOne,columnTwo,columnThree)
   
-
+    //show planner is my div class in my html
     $(".showPlanner").append(row)
     
 }
@@ -75,4 +79,4 @@ $(".saveBtn").on("click", function(){
    }
 
      
-})
+})      
